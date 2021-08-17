@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+  height: 100px;
+  width: 150px;
+}
+
+h1 {
+  text-align: right;
+  font-size: 12px;
+}
+
+h1 a.name
+{
+  font-size: 15px;
+  color:rgb(62, 129, 170);
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+  width: 100% auto;
+  margin: 0;
+  padding:0;
+  overflow: hidden;
+  background-color: #04aa44;
+  word-spacing: 50%;
+}
+
+li {
+  width:20%;
+  float: left;
+}
+h2
+{
+text-align: center;
+margin: auto;
+color:rgb(10, 85, 133);
+padding-top: 5%;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #87b696;
+  border-width: 3px;
+  border-color: rgb(32, 6, 122);
+  
+}
+
+input[type=text], input[type=password] {
+  width: 25%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.joinbtn {
+  background-color: #04aa44;
+  color: rgb(250, 249, 249);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: black;
+  cursor: pointer;
+  width: 10%;
+  opacity: 0.9;
+}
+
+.classbtn {
+  width: 20%;
+  padding: 50px;
+  margin: 50px 50px;
+  display: inline-block;
+  border: black;
+  background: #a4bae9;
+  cursor: pointer;
+  border-radius: 12px;
+  
+}
+
+.classbtn:hover {
+  background-color: #b3c7d1;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 250px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

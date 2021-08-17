@@ -1,0 +1,140 @@
+div.headers {
+    text-size-adjust: 0px;
+    border-spacing: 0mm;
+    margin: 0;
+}
+
+h1 img
+    {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        height: 2.5cm;
+        padding-top: 0%;
+        block-size: 3cm;
+    
+    } 
+ h2 
+    {
+    color: rgb(5, 64, 141);
+    margin:0%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+    background-color: rgb(214, 214, 235);
+    padding: 0%;
+    }
+ h3
+    {
+    text-align: center;
+    font-size: 15px; 
+   
+    }
+hr.rounded
+     {
+        border-top: 6px solid #bbb;
+        border-radius: 25px;
+      }
+
+div.question p
+{
+   background-color: rgb(163, 202, 219);
+        width: 90%;
+        border: 4px solid rgb(122, 140, 243);
+        padding: 0px 7px 0px 3px;
+        margin: 8px;
+        height: 2.3cm; 
+        
+        
+}
+
+header 
+{padding-left: 5px;
+}
+
+#editor {
+    
+    position: absolute;
+    background-color: rgb(207, 212, 214);
+        width:50%;
+        border: 4px solid rgb(243, 204, 214);
+        margin: 1px;
+        height:max-content;
+        text-align: left;
+        padding-top: 20px;
+    }
+textarea
+{
+  resize:none;
+  overflow-y:scroll;
+  overflow-x: scroll;
+  line-height: 13px;
+  font-size: 13px;       
+  border:1px solid rgb(150, 59, 59);
+  padding:8px;
+  display: inline-block;
+  margin: 0px;
+  fill:rgb(228, 192, 125);
+  width: 97%;
+  outline:none;
+  
+}
+#output
+    {
+       float:right;
+
+        background-color: rgb(207, 212, 214);
+        width: 46%;
+        border: 4px solid rgb(243, 204, 214);
+        margin: 2px;
+        height: 9cm;  
+        
+    }
+
+.submitbtn{
+    width: 15%;
+    height: 1cm;
+    border-color: orangered;
+    background-color: powderblue;
+
+
+}
+h4 {
+    text-align: right;
+    font-size: 14px;
+  }
+
+.runbtn{
+    width: 15%;
+    height: 1cm;
+    border-color: rgb(126, 98, 88);
+    background-color: powderblue;
+    position: absolute;
+    right: 0;
+   
+}
+
+.editorheader{
+    height: 50px;
+}
+
+.container{
+	position:relative;
+	
+}
+
+.line-nums{
+	font-size:13px;
+	line-height:13px;
+	padding:10px 4px;
+	font-family: monospace;
+  background: #EEE;
+	position: absolute;
+	width: 20px;
+	left: -25px;
+	bottom: 0;
+	top: 0;
+	text-align:right;
+	border:1px solid #999;
+}

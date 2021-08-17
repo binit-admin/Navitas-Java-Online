@@ -1,0 +1,112 @@
+
+body {
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  .active {
+    background-color: green;
+    color: white;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav a {font-size: 20px}
+    .sidenav.closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
+  
+    h2 
+    {
+    color: rgb(5, 64, 141);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    
+    font: size 25px;
+    background-color:rgba(0, 255, 0, 0.322);
+    
+    }
+    
+  h1
+    {
+  background-size: 50%;
+  text-align: right;
+  font-size: 12px;
+
+    }
+  
+  h1 img
+    {
+        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 15%;
+        height: 3%;
+        
+    } 
+  
+  h3
+    {
+    text-align: center;
+    font-size: 25; 
+    }
+  
+  
+    table 
+    {
+       font-family: arial, sans-serif;
+       border-collapse: collapse;
+       width: 100%;
+    }
+     
+     td, th 
+     {
+       border: 1px solid #dddddd;
+       text-align: left;
+       padding: 8px;
+     }
+     
+     tr:nth-child(even) 
+     {
+       background-color: #dddddd;
+     }
