@@ -26,19 +26,21 @@ session_start();
 
 <body>
   <div class="headers">
-    <h1><img src="objects/NJO.png" alt="NJO">Logged in as <a href=""><u><?php echo $row['fullName']?> </u></a>
+    <h1><img src="objects/NJO.png" alt="NJO">
+      <br><br><br><br><br>
+      Logged in as <a href=""><u><?php echo $row['fullName']?> </u></a>
     </h1>
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <div class="sidenav-content">
-        <a href="#">Classes</a>
+        <a href="#">Classes<i class="arrow down"></i></a>
         <a href="#">Grades</a>
         <a href="#">Resources</a>
         <a href="#">Practice Q&A</a>
       </div>
     </div>
 
-    <h2> <span style="font-size:30px;cursor:pointer" onclick="openNav()"> &#9776; Navitas Classroom</span>
+    <h2> <span style="font-size:30px;cursor:pointer" onclick="openNav()"> <a class="bar">&#9776; </a>Navitas Classroom</span>
     </h2>
     <script>
       function openNav() {

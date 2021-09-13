@@ -25,11 +25,12 @@ session_start();
 <body>
 
 <header>
+  <h1>
 <img src="objects/NJO.png">
 
+<br><br><br><br><br><br>
 
-
-<h1>Logged in as <a class="name" alt="Student's_name"><u><?php echo $row['fullName']?> </u></a></h1>
+Logged in as <a class="name" alt="Student's_name"><u><?php echo $row['fullName']?> </u></a></h1>
 
 <ul>
   <li><a href="student.php">Home</a></li>

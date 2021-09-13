@@ -26,17 +26,50 @@ session_start();
 <body>
 
 <header>
-
+<h1>
 <img src="objects/NJO.png">
-
-<h1>Logged in as <a href="teacheraccount.php"><?php echo $row['fullName']?></a></h1>
+<br><br><br><br>
+Logged in as <a href="teacheraccount.php"><?php echo $row['fullName']?></a></h1>
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+  <li><a href="student.php">Home</a></li>
+  <li><a href="studentgradesheet.php">Grades</a></li>
+  <li><a href="resources.php">Resources</a></li>
+  <li><a href="studentaccount.php">Account</a></li>
+  <li><a href="https://navitas.com">About</a></li>
 </ul>
+
+</header>
+<br>
+
+<div class="left">
+
+  <div class="center">
+
+   <form action="/action_page.php">
+
+  <p><b>CLASSROOM</b></p>
+
+  <div class="container">
+    
+
+    <button class="containers"><b>Class 1</b></button>
+    <br>
+    <button class="containers"><b>Class 2</b></button>
+    <br>
+    <button class="containers"><b>Class 3</b></button>
+    <br>
+    
+    
+    
+    <button type="submit" class="registerbtn">Create new Class</button>
+  </div>
+  
+</form>
+
+
+  </div>
+</div>
 
 <div class="split right">
 
@@ -70,38 +103,8 @@ session_start();
   </div>
   </div>
 
-<div class="split left">
-
-  <div class="centered">
-
-   <form action="/action_page.php">
-
-  <p><b>CLASSROOM</b></p>
-
-  <div class="container">
-    <hr>
-
-    <button class=""><b>Class 1</b></button>
-
-    <button class=""><b>Class 2</b></button>
-
-    <button class=""><b>Class 3</b></button>
-
-    
-    <hr>
-    
-    <button type="submit" class="registerbtn">Create new Class</button>
-  </div>
-  
-</form>
 
 
-  </div>
-</div>
-
-
-
-</header>
 
 </body>
 </html>

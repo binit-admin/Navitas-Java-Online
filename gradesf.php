@@ -26,24 +26,25 @@ $email= $_SESSION['email'];
 <body>
   <div class="headers">
     <h1><img src="objects/NJO.png" alt="NJO">
-      Logged in as <a href=""><?php echo $row['fullName']?></a></h1>
+      <br><br><br><br><br>
+      Logged in as <a href=""><u><?php echo $row['fullName']?></u></a></h1>
   </div>
 
   <div id="mySidenav"class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     
     <div class="sidenav-content">
-      <a href="#">Home</a>
+      <a href="teacher.php">Home</a>
       <a href="#">Grades</a>
       <button class="dropdown-btn">Classes
         <i class="arrow down"></i>
       </button>
       <div class="dropdown-container">
-        <a href="#">Class1</a>
-        <a href="#">Class2</a>
-        <a href="#">Class3</a>
+        <a href="teacher.php">Class1</a>
+        <a href="teacher.php">Class2</a>
+        <a href="teacher.php">Class3</a>
         </div>
-        <a href="#">Logout</a>
+        <a href="logout.php">Logout</a>
     </div>
   </div>
       <script>
@@ -67,7 +68,7 @@ $email= $_SESSION['email'];
   
 
   <h2> <span style="font-size:30px;cursor:pointer"
-     onclick="openNav()"> &#9776; Grades</span>
+     onclick="openNav()"> <a class="bar">&#9776;</a> Grades</span>
   </h2>
   <script>
     function openNav() {
@@ -92,37 +93,37 @@ $email= $_SESSION['email'];
     <tr>
       <th>alice alice</th>
       <th>23456678</th>
-      <th><u style="color: blue;">review</th>
+      <th><u href="" class="a" style="color: blue;">review</th>
       <th>80/100</th>
     </tr>
     <tr>
       <th>binit binit</th>
       <th>12345678</th>
-      <th><u>review</th>
+      <th><u href="" class="a" style="color: blue;">review</th>
       <th>80/100</th>
     </tr>
     <tr>
       <th>prashamsa sapkota</th>
       <th>20987542 </th>
-      <th><u>review</th>
+      <th><u href="" class="a" style="color: blue;">review</th>
       <th>80/100</th>
     </tr>
     <tr>
       <th>shishir shishir</th>
       <th>53735478 </th>
-      <th><u>review</th>
+      <th><u href="" class="a" style="color: blue;">review</th>
       <th>80/100</th>
     </tr>
     <tr>
       <th>wardah wardah</th>
       <th>24363922</th>
-      <th><u>review</th>
+      <th><u href="" class="a" style="color: blue;">review</th>
       <th>80/100</th>
     </tr>
     <tr>
       <th>thomas remous</th>
       <th>26898300 </th>
-      <th><u>review</th>
+      <th><u href="" class="a" style="color: blue;">review</th>
       <th>80/100</th>
     </tr>
 
