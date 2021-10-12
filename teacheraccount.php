@@ -7,51 +7,51 @@ session_start();
     
     //connection to account table fro auto-generated form
     $email= $_SESSION['email'];
-	$sqlSA1 =<<<EOF
+	$sqlTA1 =<<<EOF
 		SELECT * from account
 		WHERE email='$email';
 	
 	EOF;
 	
-	$returnSA1 = $db->query($sqlSA1);
-	$row = $returnSA1->fetchArray(SQLITE3_ASSOC);
+	$returnTA1 = $db->query($sqlTA1);
+	$row = $returnTA1->fetchArray(SQLITE3_ASSOC);
 
   //if empty address & course, (add) else (update)
   
 	
-    if ($_SERVER['REQUEST_METHOD'] == "POST" &&  isset($_POST['register']))
+    if ($_SERVER['REQUEST_METHOD'] == "POST" &&  isset($_POST['submit']))
     //account form inputs
     {
         $fullName= $_POST['name'];
 		    $email = $_POST['email'];
         $dateOfBirth = $_POST['dateOfBirth'];
-        $address = $_POST['address'];
-        $course = $_POST['course'];
+        $field = $_POST['field'];
+        $contact = $_POST['contact'];
 
         $account = $row['accountID'];
 
-              $sqlSA3 =<<<EOF
-          SELECT * from student
+              $sqlTA3 =<<<EOF
+          SELECT * from teacher
           WHERE email='$email';
         
         EOF;
         
-        $returnSA3 = $db->query($sqlSA3);
-        $row3 = $returnSA3->fetchArray(SQLITE3_ASSOC);
+        $returnTA3 = $db->query($sqlTA3);
+        $row3 = $returnTA3->fetchArray(SQLITE3_ASSOC);
      
       
-//existing address and course then update
+//existing contact and field then update
         if (empty($row3)){
-              $studentID = random(7);
-                      $sql_SA =<<<EOF
+              $staffID = random(7);
+                      $sql_TA =<<<EOF
 
-                      INSERT INTO student (studentID, accountID, name, email, dateOfBirth, address, course) 
-                      VALUES ('$studentID',$account, '$fullName', '$email','$dateOfBirth', '$address', '$course');
+                      INSERT INTO teacher (staffID, accountID, name, email, dateOfBirth, field, contactNum) 
+                      VALUES ('$staffID',$account, '$fullName', '$email','$dateOfBirth', '$field', '$contact');
                     EOF;
-                        $return_SA = $db->exec($sql_SA);
+                        $return_TA = $db->exec($sql_TA);
                     
 
-                        if($return_SA)
+                        if($return_TA)
                         {
                         sleep(2);
                         echo '<i>Account updated Successfully</i>'.'<br>';
@@ -62,20 +62,20 @@ session_start();
           
 
         }
-       //add course and address for the first time
+       //add field and contact for the first time
         else
        {
         $sqlUp =<<<EOF
-            UPDATE student SET dateOfBirth= '$dateOfBirth', address='$address', course ='$course', name ='$fullName'
+            UPDATE teacher SET dateOfBirth= '$dateOfBirth', field='$field', contactNum ='$contact', name ='$fullName'
             WHERE email='$email';
             ;
     
           EOF;
-            $return_S = $db->exec($sqlUp);
+            $return_T = $db->exec($sqlUp);
             
-            if($return_S)
+            if($return_T)
             {
-              echo '<i>Data Updated for Existing Student</i>.';
+              echo '<i>Data Updated for Existing Teacher</i>.';
 
             }
             else
@@ -88,14 +88,14 @@ session_start();
    
  } 
       //read from the updated databse to display for the next page load
-      $sqlSA2 =<<<EOF
-        SELECT * from student
+      $sqlTA2 =<<<EOF
+        SELECT * from teacher
         WHERE email= '$email';
     
       EOF;
         
-        $returnSA2 = $db->query($sqlSA2);
-        $rowSA2 = $returnSA2->fetchArray(SQLITE3_ASSOC);
+        $returnTA2 = $db->query($sqlTA2);
+        $rowTA2 = $returnTA2->fetchArray(SQLITE3_ASSOC);
 
 
 ?>
@@ -113,15 +113,15 @@ session_start();
 <h2>Update Your Details</h2>
 
 <div class="container">
-  <form action="studentaccount.php" method="POST">
+  <form action="teacheraccount.php" method="POST">
   <div class="row">
     <div class="col-25">
       <label for="fname"> Full Name</label>
     </div>
     <div class="col-75">
-      <input type="text" id="fname" name="name" value="<?php  if ($rowSA2)
+      <input type="text" id="fname" name="name" value="<?php  if ($rowTA2)
                                                             {
-                                                              echo $rowSA2['name'];
+                                                              echo $rowTA2['name'];
                                                             }
                                                             else echo $row['fullName'];
                                                         ?>">
@@ -132,7 +132,7 @@ session_start();
       <label for="email">Email Address</label>
     </div>
     <div class="col-75">
-      <input type="text" id="email" name="email" value="<?php echo $row['email'];?>" readonly> 
+      <input type="text" id="email" name="email" value="<?php echo $row['email']?>" readonly> 
     </div>
   </div>
   <div class="row">
@@ -140,9 +140,9 @@ session_start();
       <label for="DateOfBirth"> Date of Birth</label>
     </div>
     <div class="col-75">
-        <input type="text" id="dob" name="dateOfBirth" value="<?php  if ($rowSA2)
+        <input type="text" id="dob" name="dateOfBirth" value="<?php  if ($rowTA2)
                                                             {
-                                                              echo $rowSA2['dateOfBirth'];
+                                                              echo $rowTA2['dateOfBirth'];
                                                             }
                                                             else echo $row['dateOfBirth'];
                                                         ?>"> 
@@ -150,13 +150,12 @@ session_start();
   </div>
   <div class="row">
     <div class="col-25">
-      <label for="address">Address</label>
-    </div> 
-    
+      <label for="feild">Field</label>
+    </div>
     <div class="col-75">
-      <input type="text" id="address" name="address" value="<?php  if ($rowSA2)
+      <input type="text" id="field" name="field" value="<?php  if ($rowTA2)
                                                             {
-                                                              echo $rowSA2['address'];
+                                                              echo $rowTA2['field'];
                                                             }
                                                             else echo '';
                                                         ?>" required>
@@ -165,25 +164,23 @@ session_start();
 
   <div class="row">
     <div class="col-25">
-      <label for="course"> Course</label>
+      <label for="contact"> Contact</label>
     </div>
     <div class="col-75">
-      <input type="text" id="course" name="course" value="<?php  if ($rowSA2)
+      <input type="text" id="contact" name="contact"  value="<?php  if ($rowTA2)
                                                             {
-                                                              echo $rowSA2['course'];
+                                                              echo $rowTA2['contactNum'];
                                                             }
                                                             else echo '';
                                                         ?>" required>
     </div>
   </div>
-  <br>
   <div class="row">
-    <input type="submit" value="Update" name="register"> 
+      <br>
+    <input type="submit" value="Update" name="submit">
   </div>
   </form>
 </div>
 
 </body>
 </html>
-
- 

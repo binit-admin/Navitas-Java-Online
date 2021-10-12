@@ -1,0 +1,62 @@
+html, body {
+                height: 100%;
+                min-height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .split-pane-divider{
+                background: #aaa;
+            }
+            
+            #left-component {
+                width: 20%;
+/*                min-width: 20vw;
+                max-width: 20vw;*/
+                background-color: #337ab7;
+            }
+            #right-left-component {
+                width: 100%;
+                background-color: #f5f5f5;
+            }
+            #right-right-component {
+                left: 100%;
+                margin-left:1px;
+                /*min-width: 15em;*/
+                background-color: #f5f5f5;
+            }
+            #top-component {
+                height: 75%;
+                position: relative;
+                background-color: #f5f5f5;
+            }
+            #my-divider {
+                left: 20%; /* Same as left component width */
+                width: 2px;
+            }
+            #my-divider1 {
+				top: 75%;
+				height: 7px;
+                background-color:#bdbdbd;
+			}
+            #my-divider2 {
+                left: 100%; /* Same as left component width */
+                width: 1px;
+            }
+            #bottom-component {
+                background-color: #f5f5f5;
+                top:75%;
+                margin-top: 1px;
+            }
+            #right-component {
+                background-color: #f5f5f5;
+/*                max-width:80vw;
+                min-width:80vw;
+                min-width:17em;*/
+                
+                left: 20%;  /* Same as left component width */
+                
+                /*margin-left: 2px;  /* Same as divider width */
+            }
+            @media only screen and (max-width: 760px) {
+                #mobile_test_element { display: none; }
+            }
