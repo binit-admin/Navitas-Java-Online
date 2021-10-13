@@ -95,7 +95,7 @@ elseif ($_SERVER['REQUEST_METHOD'] == "POST" &&  isset($_POST['submit']))
 	$password = $_POST['password'];
 	$password_hash = password_hash($password, PASSWORD_BCRYPT);
 
-	$error='';
+	$error=null;
 
 	if (empty($email))
 	{
