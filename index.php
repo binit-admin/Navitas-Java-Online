@@ -17,7 +17,7 @@ include ("connection.php");
 		$password_hash = password_hash($password, PASSWORD_BCRYPT);
 		$password_hash = password_hash($confirmPswd, PASSWORD_BCRYPT);
 		
-		$error='';
+		$error= null;
 
 		$sql1 =<<<EOF
 		SELECT * from account
