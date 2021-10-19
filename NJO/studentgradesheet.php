@@ -26,7 +26,7 @@ session_start();
 
 <body>
   <div class="headers">
-    <h1><img src="objects/NJO.png" alt="NJO">
+    <h1><img src="objects/navitas.jpeg" alt="NJO">
       <br><br><br><br><br>
       Logged in as <a href=""><u><?php echo $row['fullName']?> </u></a>
     </h1>
@@ -60,20 +60,20 @@ session_start();
 
       </tr>
       <tr>
-        <th>Class1- Loop</th>
+        <th>Class 1</th>
         <th>30/100</th>
 
       </tr>
       <tr>
-        <th>Class2- Sequence</th>
+        <th>Class 2</th>
         <th>80/100</th>
       </tr>
       <tr>
-        <th>Class3- Array</th>
+        <th>Class 3</th>
         <th>80/100</th>
       </tr>
       <tr>
-        <th>Class4- Series</th>
+        <th>Class 4</th>
         <th>-</th>
 
     </table>

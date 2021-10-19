@@ -88,7 +88,7 @@ include ("connection.php");
 		
 	
 //for login, to validate details
-elseif ($_SERVER['REQUEST_METHOD'] == "POST" &&  isset($_POST['submit']))
+elseif ($_SERVER['REQUEST_METHOD'] == 'POST' &&  isset($_POST['submit']))
 {
 	
 	$email = $_POST['email'];

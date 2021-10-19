@@ -38,7 +38,6 @@ if($ret)
 {
 sleep(2);
 $error .= 'Class is Created Successsfully'.'<br>';
-
 }
 echo $error;
   }
@@ -52,12 +51,14 @@ echo $error;
 
 ?>
 
+
 <!DOCTYPE html>
 <html>
 <head>
 
 <link rel="stylesheet" href="css/createclass.css">
-<script src="javascripts/two.js" charset="UTF-8"></script>
+<script src="javascripts/addQn.js" charset="UTF-8">
+</script>
 
 </head>
 
@@ -65,14 +66,17 @@ echo $error;
 
 <header>
 <h1>
-<img src="objects/NJO.png">
+<img src="objects/navitas.jpeg">
 <br><br><br><br>
 Logged in as <a href="teacheraccount.php"><?php echo $row['fullName']?></a></h1>
 
+<a href="logout.php" style="float: right;"><b>Logout</b></a>
+<br>
+
 <ul>
-  <li><a href="teacher.php">Home</a></li>
+  <li><a href="student.php">Home</a></li>
   <li><a href="gradesf.php">Grades</a></li>
-  <li><a href="https://www.w3schools.com/java/">Resources</a></li>
+  <li><a href="resources.php">Resources</a></li>
   <li><a href="teacheraccount.php">Account</a></li>
   <li><a href="https://navitas.com">About</a></li>
 </ul>
@@ -80,74 +84,85 @@ Logged in as <a href="teacheraccount.php"><?php echo $row['fullName']?></a></h1>
 </header>
 <br>
 
-<div class="left">
+<div class="container">
 
-  <div class="center">
+  <div class="tooltip">
 
-   
+
 
   <p><b>CLASSROOM</b></p>
-  
- 
-  <div class="container">
 
-  <div class = "tooltip">
+ <?php
+  /*  
+    $sql =<<<EOF
     
-  <?php
+    INSERT INTO question (user_ID, fullName, dateOFBirth, email, password, confirmPswd, account_type) 
+    VALUES ('$user_ID', '$fullName', '$dateOfBirth', '$email', '$password', '$confirmPswd', '$account_type');
+  EOF;
+      $retn = $db->exec($sql);
+*/
+?>
+
+<?php
    
 	while ($rowC = $returnC->fetchArray(SQLITE3_ASSOC)){
 
-   echo  '<button class="containers"><b>'. $rowC['classTitle'].'</b>
-    </button><br>';
-  }
-    ?>
-    <span class="tooltiptext">
-    <label class="names"><b>Add question</b></label>
-        <input type="texts" placeholder="Enter the question" >
-        <label class="names"><b>Link to the sample</b></label>
-        <input type="texts" placeholder="Enter the link" >
-        <button type="submit" class="registerbtn">Update</button>
-      </span>
-  </div>
-  </div>
+   echo  '<button class="containers" style ="font-weight: bold;" onclick="open2();">'. $rowC['classTitle'].'</button><br>';}
+   ?> 
+    
+    
+    <div class="form-popup" id="myForm">
+    <form action="teacher.php" class="form-container"><span class="tooltiptext">
+      <h5>
+    <?php echo $rowC['classTitle']; ?>
+  </h5>
+      <label class="names"><b>Add question</b></label>
+      <input type="texts" placeholder="Enter the question" >
+      <label class="names"><b>Link to the sample</b></label>
+      <input type="texts" placeholder="Enter the link" >
+      <button type="submit" class="registerbtn">Update</button>
+      <button type="button" class="registerbtn" onclick="closeForm();">Close</button>
+    </form>
+    </span>
+</div>
+    
+    </div>
 </form>
-
-
   </div>
 </div>
-
+<br>
 <div class="split right">
 
   <div class="centered">
 
-<form action="teacher.php" method="POST">
+  <form action="teacher.php" method="POST">
 
-	<p><b>NEW CLASS FORM</b></p>
+<p><b>NEW CLASS FORM</b></p>
 
-  <div class="container">
-    <hr>
+<div class="container">
+  <hr>
 
-    <label class="name"><b>Title</b></label>
-    <input type="text" placeholder="Enter Title" name= "classTitle" required>
+  <label class="name"><b>Title</b></label>
+  <input type="text" placeholder="Enter Title" name= "classTitle" required>
 
-    <label class="name"><b>Class Code</b></label>
-    <input type="text" placeholder="Enter Class Code" name= "classCode" required>
+  <label class="name"><b>Class Code</b></label>
+  <input type="text" placeholder="Enter Class Code" name= "classCode" required>
 
-    <label class="name"><b> Total Marks</b></label>
-    <input type="text" placeholder="Enter Total Marks" name= "totalMarks" required>
+  <label class="name"><b> Total Marks</b></label>
+  <input type="text" placeholder="Enter Total Marks" name= "totalMarks" required>
 
-    <label class="name"><b>Due by</b></label>
-    <input type="date" placeholder="Enter Final Due Date" name= "dueDate" required>
+  <label class="name"><b>Due by</b></label>
+  <input type="date" placeholder="Enter Final Due Date" name= "dueDate" required>
 
-    <label class="name"><b>Description</b></label>
-    <input type="text" placeholder="Enter Description" name= "description">
+  <label class="name"><b>Description</b></label>
+  <input type="text" placeholder="Enter Description" name= "description">
 
 
-    <hr>
-    
-    <button type="submit" class="registerbtn" name ="classcreate">CREATE</button>
-  </div>
+  <hr>
   
+  <button type="submit" class="registerbtn" name ="classcreate">CREATE</button>
+  <br> <br>
+</div>
 </form>
   </div>
   </div>

@@ -92,7 +92,7 @@ hr.rounded
 div.question p
 {
    background-color: #a4bae9;
-        width:300px;
+        width: 100%;
         padding: 0px 3px 0px 3px;
         margin: 8px;
         height: 2.3cm; 
@@ -103,21 +103,19 @@ header
 {padding-left: 5px;
 }
 
-#editor {
-    
+
+  #edit  
+  {
     position: absolute;
     
-        width:50%;
-        
+        width:50%; 
         margin: 1px;
         height:max-content;
         text-align: left;
         padding-top: 20px;
-        background-color: #a4bae9;
         
-        border: none;
     }
-textarea
+.edits
 {
   resize:none;
   overflow-y:scroll;
@@ -129,8 +127,8 @@ textarea
   display: inline-block;
   margin: 0px;
   fill:rgb(228, 192, 125);
-  width: 97%;
-  outline:none;
+  width: 50%;
+
   
 }
 #output
@@ -138,14 +136,17 @@ textarea
        float:right;
 
        background-color: #a4bae9;
-       width: 46%;
+       width: 100%;
        border: none;
         margin: 2px;
-        height: 9cm;  
+        height: 9cm;
+        font-size: 12px;  
         
     }
 
 .submitbtn{
+  position: relative;
+  top: 95%;
     border-radius: 20px;
 	border: 1px solid #FF4B2B;
 	background-color: #FF4B2B;
@@ -169,7 +170,8 @@ textarea
 
 
 .runbtn{
-    width: 15%;
+  right: 0%;
+    width: 10%;
     height: 1cm;
     border-radius: 20px;
 	border: 1px solid #FF4B2B;
@@ -182,8 +184,8 @@ textarea
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
     cursor: pointer;
-    position: absolute;
-    right: 0;
+  
+  
 }
 
 .runbtn:hover {
@@ -192,13 +194,14 @@ textarea
     
   }
 
-.editorheader{
-    height: 50px;
-}
 
 .container{
 	position:relative;
 	
+}
+#ace_text-input{
+  height:  auto;
+  max-width: 50%;
 }
 
 .line-nums{

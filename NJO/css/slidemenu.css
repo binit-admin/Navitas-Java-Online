@@ -1,0 +1,184 @@
+
+body {
+	background: #d5dbe9;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+	
+}
+
+.sidenav {
+  height: 80%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 23%;
+    left: 0.65%;
+    background: #FF416C;
+	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	color: #FFFFFF;
+  word-spacing: 50%;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 5%;
+}
+
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+} 
+.dropdown-btn {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #ca3737;
+  display: block;
+  border: none;
+  background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	color: #FFFFFF;
+  word-spacing: 50%;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+
+
+/* On mouse-over */
+.sidenav a:hover {
+  background-color: #fa7392;
+border-width: 3px;
+border-color: rgb(32, 6, 122);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: rgb(218, 89, 50);
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background: #FF416C;
+	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	color: #FFFFFF;
+  word-spacing: 50%;
+  padding-left: 8px;
+}
+.arrow {
+  border: solid rgb(245, 240, 240);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+/* Optional: Style the caret down icon */
+.down {
+  
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+h2 
+  {
+    list-style-type: none;
+    width: 100% auto;
+    margin: 0;
+    padding:0;
+    overflow: hidden;
+    background: #FF416C;
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    color: #FFFFFF;
+    word-spacing: 50%;
+    text-align: center;
+  }
+  
+  .bar
+  {
+    float:left;
+  }
+
+  img {
+    position: relative;
+    height: 100px;
+    width: 150px;
+    float: left;
+  }
+  
+  h1 {
+    text-align: right;
+    font-size: 15px;
+  }
+
+h3
+  {
+  text-align: center;
+  font-size: 25; 
+  }
+
+hr.rounded
+   {
+      border-top: 6px solid #bbb;
+      border-radius: 25px;
+   }
+  
+
+  table 
+  {
+     font-family: arial, sans-serif;
+     border-collapse: collapse;
+     width: 100%;
+  }
+   
+   td, th 
+   {
+     border: 1px solid #dddddd;
+     text-align: left;
+     padding: 8px;
+   }
+   
+   tr:nth-child(even) 
+     {
+       background-color: #f1f1f1;
+     }
+
+     tr:nth-child(odd)
+     {
+      background-color: #a4bae9;
+     }
+
+     .a
+     {
+       cursor: pointer;
+     }

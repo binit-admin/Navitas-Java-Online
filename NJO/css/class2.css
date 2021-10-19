@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #d5dbe9;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+	
+}
+
+img {
+  height: 100px;
+  width: 150px;
+  float: left;
+}
+
+h1 {
+  text-align: right;
+  font-size: 12px;
+}
+
+
+
+ul {
+  list-style-type: none;
+  width: 100% auto;
+  margin: 0;
+  padding:0;
+  overflow: hidden;
+  background: #FF416C;
+	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	color: #FFFFFF;
+  word-spacing: 50%;
+}
+
+li {
+  width:20%;
+  float: left;
+}
+h2
+{
+text-align: center;
+margin: auto;
+color:rgb(10, 85, 133);
+padding-top: 3%;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #fa7392;
+  border-width: 3px;
+  border-color: rgb(32, 6, 122);
+  
+}
+
+input[type=text], input[type=password] {
+  width: 25%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #d6d5d5;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.joinbtn {
+  border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: black;
+  cursor: pointer;
+  width: 10%;
+  opacity: 0.9;
+}
+
+.classbtn {
+  width: 20%;
+  padding: 50px;
+  margin: 50px 70px;
+  display: inline-block;
+  border: black;
+  background: #a4bae9;
+  cursor: pointer;
+  border-radius: 12px;
+  
+}
+
+.classbtn:hover {
+  background-color: #b3c7d1;
+}
+
+.open-modal {
+  width: 20%;
+  padding: 50px;
+  margin: 50px 70px;
+  display: inline-block;
+  border: black;
+  background: #a4bae9;
+  cursor: pointer;
+  border-radius: 12px;
+  
+}
+
+.open-modal:hover {
+  background-color: #b3c7d1;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #d5dbe9; /* Fallback color */
+  background-color: #d5dbe9; /* Black w/ opacity */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  animation-name: show;
+  animation-duration: 0.5s
+}
+
+.modal-content {
+  position: relative;
+  background-color: #d5dbe9;
+  margin: 10% auto;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+@keyframes show {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  padding: 1px;
+  background-color: #FF4B2B;
+  color: white;
+}
+
+.modal-body {
+  padding: 12px;
+}
+
+.modal-footer {
+  position: relative;
+  background-color: #d5dbe9;
+  margin: auto;
+  padding: 12px;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;

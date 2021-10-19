@@ -1,7 +1,7 @@
 package jdoodle;
 
-
 import java.io.BufferedReader;
+//import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -9,22 +9,25 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+
+
 public class api {
     public static void main(String args[]) {
 
-        
-        
-            
+    //Scanner kb = new Scanner(System.in);
+    //String sCode = kb.next();
+
+    String str ="public class SumOfNumbers1{public static void main(String args[]){int n1 = 225, n2 = 115, sum;sum = n1 + n2;System.out.println(sum);}}";
         String clientId = "f09ff16aed0322f99d5051c1076667b5"; 
         String clientSecret = "36bbfab973fb73461c12dcb4acaf90e3896e687e563845ddfc10444756e1516e"; 
-        String script = "shishir";
+        String script = str;
         String language = "java";
         String versionIndex = "3";
 
         try {
             URL url = new URL("https://api.jdoodle.com/v1/execute");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setDoOutput(true);
+            connection.setDoOutput(true); 
             connection.setRequestMethod("POST");
             connection.setRequestProperty("Content-Type", "application/json");
 
@@ -47,10 +50,12 @@ public class api {
             bufferedReader = new BufferedReader(new InputStreamReader(
             (connection.getInputStream())));
 
+
             String output;
             System.out.println("Output from JDoodle .... \n");
             while ((output = bufferedReader.readLine()) != null) {
-                System.out.println(output);
+                System.out.print(output);            
+
             }
 
             connection.disconnect();
@@ -61,4 +66,5 @@ public class api {
             e.printStackTrace();
         }
     }
+
 }
